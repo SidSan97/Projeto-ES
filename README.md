@@ -1,2 +1,2 @@
 # Projeto-ES
-Repósitorio do projeto final de Engenharia de Software MATA62 2022.2
+Repósitorio do projeto final da disciplina de Engenharia de Software UFBA MATA62 2022.2
