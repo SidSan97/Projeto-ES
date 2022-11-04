@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style type="text/css">
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+
+
+        label {
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+
+        input,
+        textarea {
+            font: 1em sans-serif;
+
+            width: 300px;
+            box-sizing: border-box;
+
+            border: 1px solid #999;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #000;
+        }
+
+        textarea {
+            vertical-align: top;
+
+            height: 5em;
+        }
+
+        .button {
+            padding-left: 90px;
+        }
+
+        button {
+            margin-left: 0.5em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>Criar Conta</h1>
+    <section id="new-user" method="post">
+        <form action="">
+            <!--replace the action at some point-->
+            <div>
+                <label for="user">Email:</label>
+                <input type="email" id="user" name="userEmail" />
+            </div>
+            <p></p>
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="user-password" name="userPassword" />
+            </div>
+            <p></p>
+            <div>
+                <label for="class-name">Nome da Turma:</label>
+                <input type="text" id="class-name" name="">
+            </div>
+            <p></p>
+            <div class="button">
+                <input type="submit">
+            </div>
+        </form>
+
+    </section>
+</body>
+
+
+
+</html>
