@@ -15,7 +15,7 @@
     <section id="file-submission">
         <form action="/submited-page(??)"> <!--replace the action at some point-->
             <label for="file-submit" style="display: block; font: 1rem 'Fira Sans', sans-serif;">submeta sua resposta aqui:</label>
-            <input type="file" id="file-submission" name="submited-file" accept=".txt, .pdf" style="margin: .4rem 0;">
+            <input type="file" id="file-submit" name="submited-file" accept=".txt, .pdf" style="margin: .4rem 0;">
             <p></p>
             <input type="submit">
         </form>
