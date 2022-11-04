@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DADOS>
+    <USER>
+        <LOGIN>email@email.com</LOGIN>
+        <SENHA>senha1</SENHA>
+    </USER>
+
+     <USER>
+        <LOGIN>email2@email.com</LOGIN>
+        <SENHA>senha2</SENHA>
+    </USER>
+   
+</DADOS>
