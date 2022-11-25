@@ -1,32 +1,54 @@
 <?php
+namespace App\Models;
+//include('Conexao.php');
+use App\Models\Conexao;
 
-class Logar
+class Logar extends Conexao
 {
-    private $conexao;
+  public function validarLogin($login, $senha)
+  {
+      $conn = $this->connect();
 
-    public function __construct() 
-    {
-      $this->conexao = new Conexao();
-    }
+      $sql  = "SELECT * FROM usuarios WHERE email =:email LIMIT 1";
+      $stmt = $conn->prepare($sql);
 
-    // efetua login
-    public function logar($login, $senha) 
-    {
+      $stmt->bindParam(':email', $login);
 
-      $sql = "SELECT * FROM usuarios WHERE email = '$login' AND senha = '$senha'";
+      if($stmt->execute()) {
 
-      $executa = mysqli_query($this->conexao->getCon(), $sql);
+          if(($linha = $stmt->fetch(\PDO::FETCH_ASSOC))) {
 
-      if(mysqli_num_rows($executa) > 0) 
-      {
-        session_start();
-        $_SESSION['logado'] = true;
-        $_SESSION['nivel']  = "admin";
-        return true;
-      } 
-      else 
-      {
-        return false;
+              if(password_verify($senha, $linha['senha'])) {
+                  $_SESSION['cliente_autenticado'] = true;
+                  $_SESSION['id_professor'] = $linha['id'];
+                  $_SESSION['nome_professor'] = $linha['nome'];
+
+                  return true;
+                  exit;
+              }
+              else {               
+                die("erro senha");      
+                  session_destroy();
+                  $_SESSION['cliente_autenticado'] = false; 
+                  
+                  return false;
+                  exit;
+              }
+          }
+          else {
+              session_destroy();
+              $_SESSION['cliente_autenticado'] = false; 
+                  
+              return false;
+              exit;
+          }
       }
-    }
+      else {
+          session_destroy();
+          $_SESSION['cliente_autenticado'] = false; 
+
+          return false;
+          exit;
+      }
+  }
 }

@@ -1,21 +1,24 @@
 <?php
 
+use App\Models\Logar;
+
 include('../model/Conexao.php');
 include('../model/Logar.php');
 
-if(isset($_POST['entrar']))
+if(isset($_POST['logar']))
 {
+    $fazerLogin = new Logar();
+
     $login = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $fazerLogin = new Logar;
+    $fazerLogin->validarLogin($login, $senha);
 
-    $fazerLogin->logar($login, $senha);
 
-    if($fazerLogin === true)
+    if($fazerLogin == true)
     {
         header('location: ../../index.php');
     }
     else
-        header('location: ../../index.php?errorLogin');
+        header('location: ../../login.php?errorLogin');
 }

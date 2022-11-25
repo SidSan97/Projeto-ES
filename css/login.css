@@ -2,6 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
+    background-color: #3c7c87;
 }
 
 .form input
@@ -9,4 +10,63 @@ body
     height: 45px;
     border-radius: 5px;
     outline: none;
+}
+
+.titulo
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.div-login
+{
+    border: black 1px solid;
+    width: 400px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 13px;
+}
+
+.div-login h2
+{
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.div-login input
+{
+    height: 45px;
+    width: 90%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border-color: #7acbcb;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 5px;
+    outline: none;
+}
+
+.btn-login
+{
+    background-color: red;
+    border: none;
+    border-radius: 3px;
+    height: 45px;
+    width: 150px;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.btn-login:hover
+{
+    background-color: rgb(240, 49, 49);
 }

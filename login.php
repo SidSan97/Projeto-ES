@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +14,7 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <h1 class="titulo">Faça seu login</h1>
 
     <form action="App/Controller/LoginController.php" method="POST" class="form">
         <div style="display: flex; justify-content: center">
@@ -24,9 +28,20 @@
         </div>
 
         <div style="display: flex; justify-content: center">
-            <button class="btn-login" type="submit" name="entrar">ENTRAR</button>
+            <button class="btn-login" type="submit" name="logar">ENTRAR</button>
         </div>
     </form>
 
+    <?php
+      if(isset($_GET['errorLogin'])):
+    ?>
+		<div class="notification">
+			<p align="center">ERRO: Usuário ou senha inválidos.</p>
+		</div>
+                    
+    <?php
+        endif;
+        unset($_SESSION['nao_autenticado']);
+    ?>
 </body>
 </html>

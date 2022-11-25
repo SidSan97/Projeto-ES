@@ -1,20 +1,22 @@
 <?php
 
-  class Conexao {
-    private $usuario = 'root'; //usuario banco de dados
-    private $senha = ''; //senha banco de dados
-    private $caminho = 'localhost'; //servidor banco de dados
-    private $banco = 'eng_soft';  //nome do banco de dados
-    private $con;
+namespace App\Models;
 
-    public function __construct() {
-      $this->con = mysqli_connect($this->caminho, $this->usuario, $this->senha) or die("Conexão com o banco de dados falhou!" . mysqli_error($this->con));
+abstract class Conexao
+{
+    private $dbname   = 'mysql:host=localhost;dbname=eng_soft';
+    private $user     = 'root';
+    private $password = '';
 
-      mysqli_select_db($this->con, $this->banco) or die("Conexão com o banco de dados falhou!" . mysqli_error($this->con));
+    protected function connect()
+    {
+        try {
+            $conn = new \PDO($this->dbname, $this->user, $this->password);
+            $conn->exec("set names utf8");
+        } catch (\PDOException $erro) {
+            echo $erro->getMessage();
+        }
 
+        return $conn;
     }
-
-    public function getCon() {
-      return $this->con;
-    }
-  }
+}
