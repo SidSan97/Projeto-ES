@@ -13,12 +13,8 @@ module.exports = class checador{
                 sum += this.similar_text(arquivo.extrairTexto()[j], test.extrairTexto()[j], 1);
             }
             var likeness = sum/(test.extrairTexto().length);
-            this.salvarResultado(arquivo.nome.replace('files/', ''), likeness, arquivo.nome, test.nome);
+            this.salvarResultado(arquivo.nome.replace('files/', ''), likeness, arquivo, test);
         }
-
-
-
-
     }
 
     salvarResultado(filename, likeness, file1, file2){

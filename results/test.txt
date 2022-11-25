@@ -1,6 +1,6 @@
 
-Semelhança entre os arquivos undefined e undefined: 100%
-Semelhança entre os arquivos undefined e undefined: 100%
-Semelhança entre os arquivos undefined e undefined: 100%
-Semelhança entre os arquivos undefined e undefined: 100%
-Semelhança entre os arquivos undefined e undefined: 100%
+Semelhança entre os arquivos files/test.txt e files/test - Copia (2).txt: 100%
+Semelhança entre os arquivos files/test.txt e files/test - Copia (3).txt: 100%
+Semelhança entre os arquivos files/test.txt e files/test - Copia (4).txt: 100%
+Semelhança entre os arquivos files/test.txt e files/test - Copia.txt: 100%
+Semelhança entre os arquivos files/test.txt e files/test.txt: 100%
