@@ -58,10 +58,11 @@ class checador {
 
     private function salvarResultado($arquivo1, $arquivo2, $score){
         $assignment = str_replace("files/", "", $arquivo1->getDiretorio());
-        $nome = $arquivo1->getNome();
+        $nome = str_replace(".txt", "", $arquivo1->getNome());
+        $nome2 = str_replace(".txt", "", $arquivo2->getNome());
         $filepath = "scan results/" . $assignment . "/" . $nome . ".csv";
 
-        $content = ($arquivo1->getNome()) . ", " . ($arquivo2->getNome()) . ", " . strval($score) . "\n";
+        $content = $nome . ", " . $nome2 . ", " . strval($score) . "\n";
         
         $file = fopen($filepath, "a");
         fwrite($file, $content);
@@ -69,8 +70,8 @@ class checador {
 
     private function clearResultado($arquivo){
         $assignment = str_replace("files/", "", $arquivo->getDiretorio());
-        $nome = $arquivo->getNome();
-
+        $nome = str_replace(".txt", "", $arquivo->getNome());
+        
         @mkdir(("scan results" . "/" .  $assignment));
 
         $filepath = "scan results/" . $assignment . "/" . $nome . ".csv";

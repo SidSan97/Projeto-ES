@@ -1,4 +1,5 @@
 <?php
+include ("pdfparser-master/alt_autoload.php-dist");
 
 class file {
     private $nome;
@@ -31,6 +32,23 @@ class txtfile extends file {
     
         $content = explode("\n" ,file_get_contents($filepath));
         parent::__construct($filename, $diretorio, $content);
+    }
+
+}
+
+class PDFfile {
+    public function pdf2txt($assignment, $filename){
+        $diretorioPDF = "filesPDF/" . $assignment;
+        $filepathPDF = $diretorioPDF . "/" . $filename;
+
+        $parser = new \Smalot\PdfParser\Parser();
+        $pdf = $parser->parseFile($filepathPDF);
+        $text = $pdf->getText();
+
+        $filenameTXT = str_replace(".pdf", ".txt", $filename);
+        $file = fopen(("files/" . $assignment . "/" . $filenameTXT), "w");
+        fwrite($file, $text);
+
     }
 
 }
