@@ -2,6 +2,7 @@
 namespace App\Models\Conexao;
 
 include('App/model/Conexao.php');
+use App\Models\Conexao;
 
 
 /*class CadUsuario extends Conexao
@@ -23,18 +24,16 @@ include('App/model/Conexao.php');
 
 }*/
 
-$email = "admin@email.com";
-$senha = "admin123";
+$nome  = "Ivan";
+$email = "prof1@email.com";
+$senha = "admin012";
 
 $senha2 = password_hash($senha, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO usuarios (nome, email, senha) VALUES 
-                    ('Professor 1','".$email."', '".$senha2."')";
+                    ('".$nome."','".$email."', '".$senha2."')";
 
 $con = new Conexao();
-
-$conn = $con->getCon();
-
 //$executa = mysqli_query($conn, $sql);
 
 if($conn->query($sql)) 
