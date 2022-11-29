@@ -17,21 +17,23 @@
     <h2 class="titulo">Faça aqui seu upload</h2>
 
     <div class="container">
-        <form>
+        <form action="../controller/UploadTarafefasBack.php" enctype="multipart/form-data" method="POST">
             <div class="form-group">
                 <label for="tituloTarefa">Informe o título da tarefa</label>
-                <input type="text" class="form-control" id="tituloTarefa" required>
+                <input type="text" class="form-control" id="tituloTarefa" name="tituloTarefa" required>
             </div>
 
             <div class="form-group">
                 <label for="descricaoTarefa">Descrição da tarefa</label>
-                <textarea class="form-control" id="descricaoTarefa" rows="3" required></textarea>
+                <textarea class="form-control" id="descricaoTarefa" rows="3" name="descricaoTarefa" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="uploadTarefa">Upload da tarefa</label>
-                <input type="file" class="form-control-file" id="uploadTarefa">
+                <input type="file" class="form-control-file" id="uploadTarefa" name="uploadTarefa" required>
             </div>
+
+            <button class="btn btn-primary" type="submit" name="enviar">Enviar</button>
         </form>
     </div>
 
