@@ -19,12 +19,15 @@ if(isset($_POST['enviar']))
         {
             echo '<script>alert("Não foi possivel fazer o upload")</script>';
         }
-
-        move_uploaded_file($temporario, $pasta.$novoNome);          
+        else
+        {
+            move_uploaded_file($temporario, $pasta.$novoNome); 
+            echo "<script>alert('Upload feito com sucesso!');location.href=\"../view/uploadTarefa.php\";</script>";
+        }      
        
     }
     else 
     {
-     echo "<script>alert('O formato $extensao não é permitido');location.href=\"../admin/index.php\";</script>";
+     echo "<script>alert('O formato $extensao não é permitido');location.href=\"../view/uploadTarefa.php\";</script>";
     }
 }
