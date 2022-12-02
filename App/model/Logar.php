@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+session_start();
 //include('Conexao.php');
 use App\Models\Conexao;
 
