@@ -17,7 +17,7 @@
     <h2 class="titulo">Faça aqui seu upload</h2>
 
     <div class="container">
-        <form action="../Controller/UploadTarafefasBack.php" enctype="multipart/form-data" method="POST">
+        <form action="../Controller/ControllerUploadTarefas.php" enctype="multipart/form-data" method="POST">
             <div class="form-group">
                 <label for="tituloTarefa">Informe o título da tarefa</label>
                 <input type="text" class="form-control" name="tituloTarefa" id="tituloTarefa" required>
