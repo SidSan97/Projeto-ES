@@ -55,10 +55,10 @@ function CreateAssignment(){
         $file = fopen("../files/{$name}/readme.txt", "w");
         fwrite($file, $content);
 
-        copy("../models/assignment.php", "../{$name}.php");
-        copy("../models/App/View/uploadTarefa.php", "../pages/{$name}/App/View/upload-{$name}.php");
-        copy("../models/App/css/uploadTarefa.css", "../pages/{$name}/App/css/upload{$name}.css");
-        copy("../models/App/controller/UploadTarafefasBack.php", "../pages/{$name}/App/controller/upload-back-{$name}.php");
+        copy("../admin/assignment.php", "../{$name}.php");
+        copy("../admin/App/View/uploadTarefa.php", "../pages/{$name}/App/View/upload-{$name}.php");
+        copy("../admin/App/css/uploadTarefa.css", "../pages/{$name}/App/css/upload{$name}.css");
+        copy("../admin/App/controller/UploadTarafefasBack.php", "../pages/{$name}/App/controller/upload-back-{$name}.php");
 
         header("Location: ../{$name}.php");
         exit();

@@ -18,7 +18,7 @@ if(isset($_POST['logar']))
     if($a == true)
     {
         //die('deu true');
-        header('location: ../../index.php');
+        header('location: ../../../index.php');
     }
     else if($a == false){
         //die('n true');

@@ -1,0 +1,14 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+
+.body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.titulo
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
