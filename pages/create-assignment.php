@@ -10,34 +10,43 @@ function CreateAssignment(){
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Create New Assignment</title>
             <link rel="stylesheet" href="css/forms.css">
+
+            <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         </head>
 
         <body>
-            <H1>Criar nova atividade</H1>
-            <section>
-                <form action="#" method="post">
-                    <!--replace the action at some point-->
+            <div class="container">
+                <H1>Criar nova atividade</H1>
+                <section  class="form-group">
+                    <form action="#" method="post">
+                        <!--replace the action at some point-->
 
-                    <label for="title">Título:</label>
-                    <input type="text" id="title" name="assignmentTitle" />
+                        <label for="title">Título:</label>
+                        <input type="text" class="form-control" id="title" name="assignmentTitle" />
 
-                    <p></p>
-                        
-                    <label for="description">Descrição:</label>
-                    <p></p>
-                    <textarea name="description"></textarea>
-                        
-                    <p></p>
+                        <p></p>
+                            
+                        <label for="description">Descrição:</label>
+                        <p></p>
+                        <textarea class="form-control" name="description"></textarea>
+                            
+                        <p></p>
 
-                    <input type="submit" value="Criar Atividade" name="submit">
+                        <input class="btn btn-primary" type="submit" value="Criar Atividade" name="submit">
 
-                </form>
+                    </form>
 
-            </section>
-            <p></p>
-            <a href="../index.php">Voltar</a>
+                </section>
+                <p></p>
+                <button class="btn btn-success"><a class="text-light" href="../index.php">Voltar</a></button>
+
+                <!-- Bootstrap -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+            </div>
         </body>
-
         </html>
     XYZ;
 
