@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-if(!isset($_SESSION['cliente_autenticado']))
+if(isset($_SESSION['cliente_autenticado']) == false)
 {
     header('location: ../admin/App/View/login.php');
 }

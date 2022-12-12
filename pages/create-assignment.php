@@ -1,10 +1,6 @@
 <?php
-
-    if(!isset($_SESSION['cliente_autenticado']))
-    {
-        header('location: ../admin/App/View/login.php');
-    }
-
+    session_start();
+   
 function CreateAssignment(){
     $form = <<<XYZ
         <!DOCTYPE html>
@@ -56,8 +52,8 @@ function CreateAssignment(){
         </html>
     XYZ;
 
-
     echo $form;
+
     if (isset($_POST['submit'])) {
         $name = $_POST['assignmentTitle'];
         @mkdir("../files/{$name}");
@@ -82,6 +78,9 @@ function CreateAssignment(){
 
 }
 
-CreateAssignment();
+if(isset($_SESSION['cliente_autenticado']))
+    CreateAssignment();
+else
+    header('location: ../admin/App/View/login.php');
 
 ?>

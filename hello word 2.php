@@ -1,6 +1,12 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['cliente_autenticado']))
+    header('location: admin/App/View/login.php');
+
 require_once("pages/responses.php");
 require_once("checador/main.php");
+
 
 $database = array_values(array_diff(scandir("files"), array('.', '..')));
 
