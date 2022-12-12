@@ -1,4 +1,10 @@
 <?php
+
+    if(!isset($_SESSION['cliente_autenticado']))
+    {
+        header('location: ../admin/App/View/login.php');
+    }
+
 function CreateAssignment(){
     $form = <<<XYZ
         <!DOCTYPE html>

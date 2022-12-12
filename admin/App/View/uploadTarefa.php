@@ -21,7 +21,7 @@
     <?php
             $filename = basename(__FILE__, '.php');
             $filename = str_replace("upload-", "", $filename);
-            $content = file_get_contents("../../../../files/{$filename}/readme.txt");
+            $content = file_get_contents("../../../files/{$filename}/readme.txt");
 
             $pageName = ucfirst($filename);
 

@@ -1,4 +1,10 @@
 <?php
+
+if(!isset($_SESSION['cliente_autenticado']))
+{
+    header('location: ../admin/App/View/login.php');
+}
+
 require_once("responses.php");
 function displayAssignments(){
     $database = array_values(array_diff(scandir("../files"), array('.', '..', 'readme.txt')));
